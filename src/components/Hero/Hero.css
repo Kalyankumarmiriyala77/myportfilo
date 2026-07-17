@@ -1,19 +1,17 @@
 .hero{
-
     min-height:100vh;
-
     display:flex;
-
     justify-content:space-between;
-
     align-items:center;
 
-    padding:90px;
+    width:100%;
+    max-width:1400px;
+    margin:0 auto;
+
+    padding:120px 5% 80px;
 
     position:relative;
-
     overflow:hidden;
-
 }
 
 /* Aurora Background */
@@ -232,94 +230,94 @@
 
 /* Responsive */
 
-@media(max-width:992px){
+@media (max-width:992px){
 
 .hero{
 
-flex-direction:column-reverse;
+    flex-direction:column-reverse;
 
-text-align:center;
+    justify-content:center;
+    align-items:center;
 
-padding-top:150px;
+    text-align:center;
 
+    gap:50px;
+
+    padding:110px 20px 60px;
 }
 
 .hero-content{
 
-max-width:100%;
-
+    width:100%;
+    max-width:100%;
 }
 
 .hero-buttons{
 
-justify-content:center;
-
+    justify-content:center;
+    flex-wrap:wrap;
 }
 
 .hero h1{
 
-font-size:56px;
-
-}
-
-.image-card{
-
-width:300px;
-
-height:300px;
-
-margin-bottom:50px;
-
-}
-
-}
-
-@media(max-width:576px){
-
-.hero{
-
-padding:130px 25px 60px;
-
-}
-
-.hero h1{
-
-font-size:42px;
-
+    font-size:48px;
+    word-break:break-word;
 }
 
 .hero h2{
 
-font-size:24px;
-
-}
-
-.hero p{
-
-font-size:16px;
-
-}
-
-.hero-buttons{
-
-flex-direction:column;
-
-}
-
-.btn{
-
-width:100%;
-
-text-align:center;
-
+    font-size:28px;
 }
 
 .image-card{
 
-width:250px;
+    width:280px;
+    height:280px;
+    margin:0;
+}
 
-height:250px;
+}
+@media (max-width:576px){
 
+.hero{
+
+    padding:95px 18px 40px;
+}
+
+.hero h1{
+
+    font-size:38px;
+    line-height:1.2;
+}
+
+.hero h2{
+
+    font-size:22px;
+}
+
+.hero p{
+
+    font-size:15px;
+    line-height:1.7;
+}
+
+.hero-buttons{
+
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.btn{
+
+    width:100%;
+}
+
+.image-card{
+
+    width:230px;
+    height:230px;
 }
 
 }
