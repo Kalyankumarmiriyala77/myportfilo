@@ -1,6 +1,4 @@
 import "./Projects.css";
-import { motion } from "framer-motion";
-import { fadeLeft, fadeRight } from "../../animations/motion";
 
 import project1 from "../../assets/project1.jpg";
 import project2 from "../../assets/project2.jpg";
@@ -44,37 +42,22 @@ const Projects = () => {
   return (
     <section className="projects section" id="projects">
 
-      <motion.div
+      <div
         className="section-title"
-        variants={fadeLeft}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: false, amount: 0.3 }}
-        transition={{ duration: 0.8 }}
+       
       >
         <span>My Work</span>
         <h2>Featured Projects</h2>
-      </motion.div>
+      </div>
 
       <div className="projects-container">
 
         {projectData.map((project, index) => (
 
-          <motion.div
-            key={index}
+          <div
+            
             className="project-card"
-            variants={fadeRight}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: false, amount: 0.2 }}
-            transition={{
-              duration: 0.7,
-              delay: index * 0.15,
-            }}
-            whileHover={{
-              y: -12,
-              scale: 1.02,
-            }}
+            
           >
 
             <div className="project-image">
@@ -98,23 +81,31 @@ const Projects = () => {
 
               </div>
 
-              <div className="project-buttons">
+            <div className="project-buttons">
 
-                <a
-                  href={project.github}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <FaGithub />
-                  GitHub
-                </a>
+    <a
+        href={project.github}
+        target="_blank"
+        rel="noreferrer"
+    >
+        <FaGithub />
+        GitHub
+    </a>
 
-              
-              </div>
+    <a
+        href={project.live}
+        target="_blank"
+        rel="noreferrer"
+    >
+        <FaExternalLinkAlt />
+        Live Demo
+    </a>
+
+</div>
 
             </div>
 
-          </motion.div>
+          </div>
 
         ))}
 

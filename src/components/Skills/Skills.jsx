@@ -1,6 +1,4 @@
 import "./Skills.css";
-import { motion } from "framer-motion";
-import { fadeUp } from "../../animations/motion";
 
 import {
   FaHtml5,
@@ -35,57 +33,33 @@ const Skills = () => {
   ];
 
   return (
-    <section className="skills section" id="skills">
+   <section className="skills" id="skills">
 
-      <motion.div
-        className="section-title"
-        variants={fadeUp}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: false, amount: 0.3 }}
-        transition={{ duration: 0.8 }}
-      >
+    <div className="section-title">
         <span>My Expertise</span>
         <h2>Technical Skills</h2>
-      </motion.div>
+    </div>
 
-      <div className="skills-grid">
+    <div className="skills-grid">
 
-        {skills.map((skill, index) => (
+        {skills.map((skill,index)=>(
+            <div className="skill-card" key={index}>
 
-          <motion.div
-            key={index}
-            className="skill-card"
-            variants={fadeUp}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: false, amount: 0.2 }}
-            transition={{
-              duration: 0.6,
-              delay: index * 0.08,
-            }}
-            whileHover={{
-              y: -10,
-              scale: 1.05,
-            }}
-          >
+                <div
+                    className="skill-icon"
+                    style={{color:skill.color}}
+                >
+                    {skill.icon}
+                </div>
 
-            <div
-              className="skill-icon"
-              style={{ color: skill.color }}
-            >
-              {skill.icon}
+                <h3>{skill.name}</h3>
+
             </div>
-
-            <h3>{skill.name}</h3>
-
-          </motion.div>
-
         ))}
 
-      </div>
+    </div>
 
-    </section>
+</section>
   );
 };
 

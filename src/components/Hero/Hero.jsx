@@ -1,19 +1,13 @@
 import "./Hero.css";
 import profile from "../../assets/profile.png";
-import { motion } from "framer-motion";
-import { fadeLeft, fadeRight } from "../../animations/motion";
 
 const Hero = () => {
   return (
     <section className="hero" id="home">
 
-     <motion.div
+     <div
   className="hero-content"
-  variants={fadeLeft}
-  initial="hidden"
-  whileInView="visible"
-  viewport={{ once: false, amount: 0.3 }}
-  transition={{ duration: 0.8 }}
+  
 >
 
         <span className="hero-subtitle">
@@ -50,15 +44,11 @@ const Hero = () => {
 
         </div>
 
-      </motion.div>
+      </div>
 
-      <motion.div
+      <div
   className="hero-image"
-  variants={fadeRight}
-  initial="hidden"
-  whileInView="visible"
-  viewport={{ once: false, amount: 0.3 }}
-  transition={{ duration: 0.8 }}
+  
 >
 
         <div className="image-card">
@@ -70,7 +60,7 @@ const Hero = () => {
 
         </div>
 
-      </motion.div>
+      </div>
 
     </section>
   );
