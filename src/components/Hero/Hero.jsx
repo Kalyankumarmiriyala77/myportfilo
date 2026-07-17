@@ -34,8 +34,14 @@ const Hero = () => {
 
         <div className="hero-buttons">
 
-          <a href="#" className="btn primary">
-            Download CV
+          <a href="#" className="btn primary">  <a
+  href={`${import.meta.env.BASE_URL}resume.pdf`}
+  download
+  className="btn-primary"
+>
+  Download Resume
+</a>
+          
           </a>
 
           <a href="#contact" className="btn secondary">
