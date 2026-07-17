@@ -14,10 +14,7 @@ body{
 
     overflow-x:hidden;
 
-    background:
-        radial-gradient(circle at top, #6D28D9 0%, transparent 30%),
-        radial-gradient(circle at bottom right, #2563EB 0%, transparent 30%),
-        #050816;
+   background:#456fd0;
 
     color: white;
 
